@@ -177,19 +177,32 @@ footer{background:#073c78;color:#d9ecff;padding:54px 0 20px}
 .hero-logo{
   position:absolute;
   top:14px;
-  right:14px;
-  width:64px;
-  height:64px;
+  left:14px;
+  width:56px;
+  height:56px;
   object-fit:contain;
   background:#fff;
-  border-radius:14px;
-  padding:6px;
+  border-radius:12px;
+  padding:5px;
   box-shadow:0 8px 20px rgba(7,60,120,.14);
   border:1px solid #d9e7f4;
+  z-index:3;
+}
+.hero-accent{
+  position:absolute;
+  bottom:-22px;
+  left:-26px;
+  width:150px;
+  height:110px;
+  object-fit:cover;
+  border-radius:16px;
+  border:4px solid #fff;
+  box-shadow:0 16px 34px rgba(7,60,120,.2);
   z-index:3;
 }
 .contact-col{display:flex;flex-direction:column;gap:10px}
 .contact-col a[href^="tel:"]{font-weight:700}
 @media (max-width:720px){
-  .hero-logo{width:52px;height:52px;top:10px;right:10px;border-radius:12px;padding:5px}
+  .hero-logo{width:46px;height:46px;top:10px;left:10px;border-radius:10px;padding:4px}
+  .hero-accent{width:100px;height:76px;bottom:-14px;left:-12px;border-width:3px}
 }
