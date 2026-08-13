@@ -14,3 +14,6 @@
 ## GitHub Pages
 
 Source: `Deploy from a branch` → `main` → `/ (root)`.
+
+
+Final cleanup: city = Калуш; contact phone = 067 370 6806; no standalone schedule section; hero uses pets image with the Здорові Хвостики logo in the upper-right corner.

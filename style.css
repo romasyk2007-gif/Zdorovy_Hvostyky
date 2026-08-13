@@ -157,3 +157,39 @@ footer{background:#073c78;color:#d9ecff;padding:54px 0 20px}
   .product-img{height:270px}
   .cta-card{padding:32px 24px}
 }
+
+/* FINAL BLUE/SKY BRAND */
+:root{
+  --ink:#0a3f7a;
+  --blue:#0b5cab;
+  --blue-dark:#073c78;
+  --blue-soft:#eaf4ff;
+  --sky:#79c9f7;
+  --red:#2f91c8;
+  --muted:#667b90;
+  --line:#d9e7f4;
+  --paper:#f5faff;
+  --card:#ffffff;
+  --dark:#073c78;
+}
+.hero-media{position:relative}
+.hero-media .hero-pets{display:block;width:100%;height:100%;object-fit:cover}
+.hero-logo{
+  position:absolute;
+  top:18px;
+  right:18px;
+  width:102px;
+  height:102px;
+  object-fit:contain;
+  background:#fff;
+  border-radius:20px;
+  padding:8px;
+  box-shadow:0 14px 32px rgba(7,60,120,.16);
+  border:1px solid #d9e7f4;
+  z-index:3;
+}
+.contact-col{display:flex;flex-direction:column;gap:10px}
+.contact-col a[href^="tel:"]{font-weight:700}
+@media (max-width:720px){
+  .hero-logo{width:82px;height:82px;top:12px;right:12px}
+}
