@@ -1,40 +1,175 @@
 <!doctype html>
 <html lang="uk">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="ЗооВетСвіт — інтернет-магазин зоотоварів та ветеринарних товарів. Івано-Франківськ.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ЗооВетСвіт — зоотовари та ветеринарні товари в Івано-Франківську.">
 <title>ЗооВетСвіт — зоотовари та веттовари</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header"><div class="container nav">
-<a class="brand" href="#top"><span class="logo"><img src="assets/logo-zoo-vet-svit.png" alt="Логотип ЗооВетСвіт"></span><span class="brand-copy"><b>ЗооВетСвіт</b><small>ЗООТОВАРИ · ВЕТТОВАРИ</small></span></a>
-<nav><a href="#catalog">Каталог</a><a href="#benefits">Переваги</a><a href="#stores">Магазини</a><a href="#contact">Контакти</a></nav>
-<button class="cart-btn" id="openCart" type="button">Кошик <span id="cartCount">0</span></button>
-</div></header>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <span class="logo"><img src="assets/logo-zdori-khvoskyky.png" alt="Логотип Здорові Хвостики"></span>
+      <span class="brand-copy"><b>ЗооВетСвіт</b><small>ЗООТОВАРИ · ВЕТТОВАРИ</small></span>
+    </a>
+    <nav>
+      <a href="#catalog">Каталог</a>
+      <a href="#benefits">Переваги</a>
+      <a href="#stores">Магазини</a>
+      <a href="#schedule">Графік</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+    <button class="cart-btn" id="openCart" type="button">Кошик <span id="cartCount">0</span></button>
+  </div>
+</header>
+
 <main id="top">
-<section class="hero"><div class="container hero-grid"><div>
-<div class="eyebrow">Івано-Франківськ · онлайн-магазин</div><h1>Турбота про улюбленця —<em> в одному місці.</em></h1>
-<p>Корм, догляд, аксесуари та ветеринарні товари. Обирайте онлайн, а ми допоможемо зорієнтуватися.</p>
-<div class="hero-actions"><a class="btn primary" href="#catalog">Перейти до каталогу</a><a class="btn ghost" href="https://www.instagram.com/zoo_vet_svit/" target="_blank" rel="noopener">Instagram ↗</a></div>
-<div class="hero-trust"><span>✓ 3 магазини в Івано-Франківську</span><span>✓ Консультація</span><span>✓ Самовивіз</span></div>
-</div><div class="hero-media"><img src="assets/zoo-vet-svit-store.png" alt="Магазин ЗооВетСвіт"><div class="hero-brand-card"><img src="assets/logo-zoo-vet-svit.png" alt="ЗооВетСвіт"><div><strong>ЗооВетСвіт</strong><span>магазини зоотоварів та веттоварів</span></div></div><div class="hero-badge"><b>🐶 Для здорових хвостиків</b><small>щоденна турбота без зайвого клопоту</small></div></div></div></section>
-<section class="benefits" id="benefits"><div class="container benefits-grid"><div><strong>01</strong><b>Підбір товарів</b><span>Орієнтуємося на потреби вашого улюбленця.</span></div><div><strong>02</strong><b>Три локації</b><span>Можна забрати покупку у зручному магазині.</span></div><div><strong>03</strong><b>Живе спілкування</b><span>Поставте запитання телефоном або в Instagram.</span></div></div></section>
-<section class="catalog section" id="catalog"><div class="container"><div class="section-head"><div><div class="eyebrow">Магазин</div><h2>Обирайте за потребою</h2></div><p>Демо-каталог для запуску. Товари, ціни та залишки можна замінити на реальні в <code>products.js</code>.</p></div>
-<div class="toolbar"><div class="search"><span>⌕</span><input id="search" placeholder="Пошук товару..."></div><div class="filters" id="filters"></div><select id="sort" aria-label="Сортування"><option value="featured">Спочатку рекомендовані</option><option value="priceAsc">Ціна: від дешевих</option><option value="priceDesc">Ціна: від дорогих</option><option value="name">За назвою</option></select></div>
-<div class="product-grid" id="productGrid"></div><div class="empty" id="empty" hidden>Нічого не знайдено. Спробуйте інший запит.</div></div></section>
-<section class="about section"><div class="container about-grid"><div class="brand-photo"><img src="assets/zoo-vet-svit-store.png" alt="Магазин ЗооВетСвіт"><div class="brand-photo-logo"><img src="assets/logo-zoo-vet-svit.png" alt="Логотип ЗооВетСвіт"></div></div><div><div class="eyebrow">ЗооВетСвіт</div><h2>Не просто магазин — місце, де можна запитати.</h2><p>Мережа спеціалізується на зоотоварах та ветеринарних товарах. Тут можна отримати допомогу з вибором продуктів для щоденного догляду та потреб улюбленця.</p><a class="text-link" href="https://www.instagram.com/zoo_vet_svit/" target="_blank" rel="noopener">Дивитися Instagram →</a></div></div></section>
-<section class="stores section" id="stores"><div class="container"><div class="section-head"><div><div class="eyebrow">Офлайн</div><h2>Магазини мережі</h2></div><p>Перед поїздкою краще уточнити актуальний графік телефоном.</p></div><div class="store-grid">
-<article><span>01</span><h3>вул. Івасюка, 7</h3><p>Івано-Франківськ</p><a href="tel:+380997590390">+38 (099) 759-03-90</a><a class="map" href="https://www.google.com/maps/search/?api=1&query=вулиця+Івасюка+7+Івано-Франківськ" target="_blank" rel="noopener">Карта ↗</a></article>
-<article><span>02</span><h3>вул. Незалежності, 34а</h3><p>Івано-Франківськ</p><a href="tel:+380984783012">+38 (098) 478-30-12</a><a class="map" href="https://www.google.com/maps/search/?api=1&query=вулиця+Незалежності+34а+Івано-Франківськ" target="_blank" rel="noopener">Карта ↗</a></article>
-<article><span>03</span><h3>вул. Гетьмана Мазепи, 164</h3><p>Івано-Франківськ</p><a href="tel:+380673706806">+38 (067) 370-68-06</a><a class="map" href="https://www.google.com/maps/search/?api=1&query=вулиця+Гетьмана+Мазепи+164+Івано-Франківськ" target="_blank" rel="noopener">Карта ↗</a></article>
-</div></div></section>
-<section class="cta section" id="contact"><div class="container cta-card"><div><div class="eyebrow">Потрібна допомога?</div><h2>Підкажемо, що підійде вашому улюбленцю.</h2><p>Замовлення можна залишити через кошик або зв’язатися з найближчим магазином.</p></div><div class="cta-actions"><button class="btn primary" id="openCart2">Відкрити кошик</button><a class="btn dark" href="https://www.instagram.com/zoo_vet_svit/" target="_blank" rel="noopener">Написати в Instagram</a></div></div></section>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Івано-Франківськ · онлайн-магазин</div>
+      <h1>Турбота про улюбленця — <em>в одному місці.</em></h1>
+      <p>Корм, догляд, аксесуари та ветеринарні товари. Обирайте онлайн, а ми допоможемо зорієнтуватися.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#catalog">Перейти до каталогу</a>
+        <a class="btn ghost" href="https://www.instagram.com/zoo_vet_svit/" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+      <div class="hero-trust">
+        <span>✓ 5 магазинів в Івано-Франківську</span>
+        <span>✓ Консультація</span>
+        <span>✓ Самовивіз</span>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="assets/pets-hero.png" alt="Домашні улюбленці">
+      <div class="hero-brand-card">
+        <img src="assets/logo-zdori-khvoskyky.png" alt="Здорові Хвостики">
+        <div><strong>ЗооВетСвіт</strong><span>турбота про домашніх улюбленців</span></div>
+      </div>
+      <div class="hero-badge"><b>🐾 Для здорових хвостиків</b><small>щоденна турбота без зайвого клопоту</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits" id="benefits">
+  <div class="container benefits-grid">
+    <div><strong>01</strong><b>Підбір товарів</b><span>Орієнтуємося на потреби вашого улюбленця.</span></div>
+    <div><strong>02</strong><b>П'ять локацій</b><span>Можна забрати покупку у зручному магазині.</span></div>
+    <div><strong>03</strong><b>Живе спілкування</b><span>Поставте запитання телефоном або в Instagram.</span></div>
+  </div>
+</section>
+
+<section class="catalog section" id="catalog">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Магазин</div><h2>Обирайте за потребою</h2></div>
+      <p>Каталог можна наповнити реальними товарами, цінами та залишками через <code>products.js</code>.</p>
+    </div>
+    <div class="toolbar">
+      <div class="search"><span>⌕</span><input id="search" placeholder="Пошук товару..."></div>
+      <div class="filters" id="filters"></div>
+      <select id="sort" aria-label="Сортування">
+        <option value="featured">Спочатку рекомендовані</option>
+        <option value="priceAsc">Ціна: від дешевих</option>
+        <option value="priceDesc">Ціна: від дорогих</option>
+        <option value="name">За назвою</option>
+      </select>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+    <div class="empty" id="empty" hidden>Нічого не знайдено. Спробуйте інший запит.</div>
+  </div>
+</section>
+
+<section class="about section">
+  <div class="container about-grid">
+    <div class="brand-photo">
+      <img src="assets/pets-hero.png" alt="Домашні улюбленці">
+      <div class="brand-photo-logo"><img src="assets/logo-zdori-khvoskyky.png" alt="Здорові Хвостики"></div>
+    </div>
+    <div>
+      <div class="eyebrow">ЗооВетСвіт</div>
+      <h2>Не просто магазин — місце, де можна запитати.</h2>
+      <p>Мережа спеціалізується на зоотоварах та ветеринарних товарах. Тут можна отримати допомогу з вибором продуктів для щоденного догляду та потреб улюбленця.</p>
+      <a class="text-link" href="https://www.instagram.com/zoo_vet_svit/" target="_blank" rel="noopener">Дивитися Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<section class="stores section" id="stores">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Офлайн</div><h2>Магазини мережі</h2></div>
+      <p>П'ять локацій в Івано-Франківську. Нижче — актуальний графік із наданих матеріалів.</p>
+    </div>
+    <div class="store-grid">
+      <article class="store-card"><span>01</span><h3>вул. Дзвонарська, 7</h3><p>Івано-Франківськ</p><div class="hours"><b>Пн–Пт</b><span>8:30 — 18:30</span><b>Сб</b><span>8:30 — 16:30</span></div><a class="map" href="https://www.google.com/maps/search/?api=1&query=вулиця+Дзвонарська+7+Івано-Франківськ" target="_blank" rel="noopener">Відкрити на карті ↗</a></article>
+      <article class="store-card"><span>02</span><h3>вул. В. Винниченка, 1</h3><p>Івано-Франківськ</p><div class="hours"><b>Пн–Пт</b><span>9:00 — 19:00</span><b>Сб</b><span>9:00 — 17:00</span></div><a class="map" href="https://www.google.com/maps/search/?api=1&query=вулиця+Винниченка+1+Івано-Франківськ" target="_blank" rel="noopener">Відкрити на карті ↗</a></article>
+      <article class="store-card"><span>03</span><h3>вул. Хіміків, 4</h3><p>Івано-Франківськ</p><div class="hours"><b>Пн–Пт</b><span>8:30 — 18:30</span><b>Сб</b><span>8:30 — 16:30</span></div><a class="map" href="https://www.google.com/maps/search/?api=1&query=вулиця+Хіміків+4+Івано-Франківськ" target="_blank" rel="noopener">Відкрити на карті ↗</a></article>
+      <article class="store-card"><span>04</span><h3>вул. Б. Хмельницького, 1</h3><p>Івано-Франківськ</p><div class="hours"><b>Пн–Пт</b><span>9:00 — 19:00</span><b>Сб</b><span>9:00 — 17:00</span></div><a class="map" href="https://www.google.com/maps/search/?api=1&query=вулиця+Богдана+Хмельницького+1+Івано-Франківськ" target="_blank" rel="noopener">Відкрити на карті ↗</a></article>
+      <article class="store-card"><span>05</span><h3>вул. Б. Хмельницького, 36</h3><p>Івано-Франківськ</p><div class="hours"><b>Пн–Пт</b><span>9:00 — 19:00</span><b>Сб</b><span>9:00 — 17:00</span></div><a class="map" href="https://www.google.com/maps/search/?api=1&query=вулиця+Богдана+Хмельницького+36+Івано-Франківськ" target="_blank" rel="noopener">Відкрити на карті ↗</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="schedule section" id="schedule">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Графік роботи</div><h2>Плануйте візит заздалегідь</h2></div>
+      <p>Графік нижче перенесено з наданих вами матеріалів.</p>
+    </div>
+    <div class="schedule-grid">
+      <div class="schedule-note"><strong>Понеділок — п'ятниця</strong><span>звичайний робочий день</span></div>
+      <div class="schedule-note"><strong>Субота</strong><span>скорочений графік</span></div>
+      <div class="schedule-note"><strong>Неділя</strong><span>у наданому графіку не зазначена</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta section" id="contact">
+  <div class="container cta-card">
+    <div><div class="eyebrow">Потрібна допомога?</div><h2>Підкажемо, що підійде вашому улюбленцю.</h2><p>Замовлення можна залишити через кошик або написати в Instagram.</p></div>
+    <div class="cta-actions"><button class="btn primary" id="openCart2">Відкрити кошик</button><a class="btn dark" href="https://www.instagram.com/zoo_vet_svit/" target="_blank" rel="noopener">Написати в Instagram</a></div>
+  </div>
+</section>
 </main>
-<footer><div class="container footer-grid"><div><a class="brand" href="#top"><span class="logo"><img src="assets/logo-zoo-vet-svit.png" alt="Логотип ЗооВетСвіт"></span><span class="brand-copy"><b>ЗооВетСвіт</b><small>ЗООТОВАРИ · ВЕТТОВАРИ</small></span></a><p>Турбота про домашніх улюбленців — щодня.</p></div><div><b>Навігація</b><a href="#catalog">Каталог</a><a href="#benefits">Переваги</a><a href="#stores">Магазини</a></div><div><b>Контакти</b><a href="tel:+380997590390">+38 (099) 759-03-90</a><a href="https://www.instagram.com/zoo_vet_svit/" target="_blank" rel="noopener">Instagram</a></div></div><div class="container copyright">© 2026 ЗооВетСвіт · сайт-концепт</div></footer>
-<div class="overlay" id="overlay"></div><aside class="cart" id="cart" aria-label="Кошик"><div class="cart-head"><h2>Ваш кошик</h2><button id="closeCart" class="icon-btn" type="button">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-foot"><div class="total"><span>Разом</span><strong id="cartTotal">0 ₴</strong></div><button class="btn primary full" id="checkoutBtn" type="button">Оформити замовлення</button><small>На GitHub Pages оплата не підключена; кнопка відкриє форму та підготує повідомлення для менеджера.</small></div></aside>
-<div class="modal" id="modal"><div class="modal-card"><button class="icon-btn modal-close" id="closeModal">×</button><div class="eyebrow">Замовлення</div><h2>Куди зв’язатися з вами?</h2><form id="orderForm"><label>Ім’я<input required id="name" placeholder="Ваше ім’я"></label><label>Телефон<input required id="phone" placeholder="+380..." inputmode="tel"></label><label>Спосіб отримання<select id="delivery"><option>Самовивіз з магазину</option><option>Доставка по місту</option><option>Нова пошта</option></select></label><label>Коментар<textarea id="comment" rows="3" placeholder="Наприклад, бажаний магазин або час дзвінка"></textarea></label><button class="btn primary full" type="submit">Підготувати замовлення</button></form><div id="orderResult" class="order-result" hidden></div></div></div>
-<script src="products.js"></script><script src="app.js"></script>
-</body></html>
+
+<footer>
+  <div class="container footer-grid">
+    <div><a class="brand" href="#top"><span class="logo"><img src="assets/logo-zdori-khvoskyky.png" alt="Логотип Здорові Хвостики"></span><span class="brand-copy"><b>ЗооВетСвіт</b><small>ЗООТОВАРИ · ВЕТТОВАРИ</small></span></a><p>Турбота про домашніх улюбленців — щодня.</p></div>
+    <div><b>Навігація</b><a href="#catalog">Каталог</a><a href="#stores">Магазини</a><a href="#schedule">Графік</a></div>
+    <div><b>Контакти</b><a href="https://www.instagram.com/zoo_vet_svit/" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+  <div class="container copyright">© 2026 ЗооВетСвіт · сайт-концепт</div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart" id="cart" aria-label="Кошик">
+  <div class="cart-head"><h2>Ваш кошик</h2><button id="closeCart" class="icon-btn" type="button">×</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-foot"><div class="total"><span>Разом</span><strong id="cartTotal">0 ₴</strong></div><button class="btn primary full" id="checkoutBtn" type="button">Оформити замовлення</button><small>На GitHub Pages оплата не підключена; кнопка відкриє форму замовлення.</small></div>
+</aside>
+
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <button class="icon-btn modal-close" id="closeModal">×</button>
+    <div class="eyebrow">Замовлення</div><h2>Куди зв’язатися з вами?</h2>
+    <form id="orderForm">
+      <label>Ім’я<input required id="name" placeholder="Ваше ім’я"></label>
+      <label>Телефон<input required id="phone" placeholder="+380..." inputmode="tel"></label>
+      <label>Спосіб отримання<select id="delivery"><option>Самовивіз з магазину</option><option>Доставка по місту</option><option>Нова пошта</option></select></label>
+      <label>Коментар<textarea id="comment" rows="3" placeholder="Бажаний магазин або час дзвінка"></textarea></label>
+      <button class="btn primary full" type="submit">Підготувати замовлення</button>
+    </form>
+    <div id="orderResult" class="order-result" hidden></div>
+  </div>
+</div>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
