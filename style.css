@@ -32,7 +32,8 @@ button,input,select,textarea{font:inherit}
 .hero{padding:80px 0 70px;background:linear-gradient(140deg,#eef8ff,#fbfdff)}
 .hero-grid{display:grid;grid-template-columns:1fr .9fr;gap:70px;align-items:center}
 .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:var(--blue);margin-bottom:14px}
-.hero h1{font-size:clamp(46px,6vw,78px);line-height:.98;letter-spacing:-.055em;margin:0 0 24px;max-width:800px;color:var(--blue-dark)}
+.hero-logo-top{width:100px;height:100px;object-fit:contain;background:#fff;border-radius:50%;padding:8px;border:1px solid var(--line);box-shadow:0 6px 16px #0b5cab14;margin-bottom:16px;display:block}
+.hero h1{font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-.03em;margin:0 0 20px;max-width:800px;color:var(--blue-dark)}
 .hero h1 em{font-style:normal;color:var(--sky)}
 .hero p{font-size:18px;line-height:1.7;max-width:620px;color:var(--muted)}
 .hero-actions,.cta-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
@@ -174,22 +175,8 @@ footer{background:#073c78;color:#d9ecff;padding:54px 0 20px}
 }
 .hero-media{position:relative}
 .hero-media .hero-pets{display:block;width:100%;height:100%;object-fit:cover}
-.hero-logo{
-  position:absolute;
-  top:18px;
-  right:18px;
-  width:102px;
-  height:102px;
-  object-fit:contain;
-  background:#fff;
-  border-radius:20px;
-  padding:8px;
-  box-shadow:0 14px 32px rgba(7,60,120,.16);
-  border:1px solid #d9e7f4;
-  z-index:3;
-}
 .contact-col{display:flex;flex-direction:column;gap:10px}
 .contact-col a[href^="tel:"]{font-weight:700}
 @media (max-width:720px){
-  .hero-logo{width:82px;height:82px;top:12px;right:12px}
+  .hero-logo-top{width:72px;height:72px;padding:6px}
 }
