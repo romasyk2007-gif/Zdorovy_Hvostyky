@@ -1,23 +1,12 @@
-# Здорові Хвостики — GitHub Pages
+# Здорові Хвостики — Supabase catalog integration
 
-Фірмова версія сайту з блакитно-синьою палітрою, логотипом «Здорові Хвостики», каталогом, кошиком і секціями магазинів/графіка роботи.
+Це копія поточного сайту з мінімальною зміною: каталог товарів читає активні товари з Supabase `public.products`.
 
-## Структура
+Збережено поточний HTML, CSS, hero, логотип, магазини, кошик і mailto-оформлення замовлення.
 
-- `index.html` — головна сторінка
-- `style.css` — дизайн
-- `app.js` — каталог і кошик
-- `products.js` — демо-товари
-- `assets/logo-zdori-khvoskyky.png` — наданий логотип
-- `assets/pets-hero.png` — фото для hero-блоку
+Supabase:
+- Project URL: eejnxfkuslcaptjkimeg.supabase.co
+- використовується publishable key, не secret/service_role.
 
-## GitHub Pages
-
-Source: `Deploy from a branch` → `main` → `/ (root)`.
-
-
-Final cleanup: city = Калуш; contact phone = 067 370 6806; no standalone schedule section; hero uses pets image with the Здорові Хвостики logo in the upper-right corner.
-
-
-## Supabase test integration
-This copy reads active products from the Supabase `products` table. The current order flow remains the original mailto demo; real order insertion will be a separate step.
+Для товарів читаються поля:
+id, name, price, description, image_url, is_active.
