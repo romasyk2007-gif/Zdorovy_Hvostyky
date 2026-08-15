@@ -1,12 +1,11 @@
-# Здорові Хвостики — Supabase catalog integration
+# Здорові Хвостики — Supabase catalog
 
-Це копія поточного сайту з мінімальною зміною: каталог товарів читає активні товари з Supabase `public.products`.
+Це поточна версія сайту з підключеним каталогом до Supabase.
 
-Збережено поточний HTML, CSS, hero, логотип, магазини, кошик і mailto-оформлення замовлення.
-
-Supabase:
-- Project URL: eejnxfkuslcaptjkimeg.supabase.co
-- використовується publishable key, не secret/service_role.
-
-Для товарів читаються поля:
-id, name, price, description, image_url, is_active.
+- Бренд: Здорові Хвостики
+- Supabase Project URL: https://eejnxfkuslcaptjkimeg.supabase.co
+- Джерело товарів: public.products
+- Показуються тільки is_active = true
+- Фото беруться з image_url
+- products.js збережений як backup, але не підключається до сторінки.
+- Кошик та поточне email-оформлення замовлення збережені без перебудови.
