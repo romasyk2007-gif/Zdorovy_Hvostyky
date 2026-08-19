@@ -139,10 +139,26 @@
     <button class="icon-btn modal-close" id="closeModal">×</button>
     <div class="eyebrow">Замовлення</div><h2>Куди зв’язатися з вами?</h2>
     <form id="orderForm">
-      <label>Ім’я<input required id="name" placeholder="Ваше ім’я"></label>
-      <label>Телефон<input required id="phone" placeholder="+380..." inputmode="tel"></label>
-      <label>Спосіб отримання<select id="delivery"><option>Самовивіз з магазину</option><option>Доставка по місту</option><option>Нова пошта</option></select></label>
-      <label>Коментар<textarea id="comment" rows="3" placeholder="Бажаний магазин або час дзвінка"></textarea></label>
+      <div class="mode-toggle" role="tablist">
+        <button type="button" class="toggle-btn active" data-mode="pickup">Самовивіз</button>
+        <button type="button" class="toggle-btn" data-mode="delivery">Доставка (Нова пошта)</button>
+      </div>
+
+      <div id="pickupFields" class="order-fields">
+        <label>Ім’я та прізвище<input required id="p_name" placeholder="Ім’я Прізвище"></label>
+        <label>Телефон<input required id="p_phone" placeholder="+380..." inputmode="tel"></label>
+        <label>Магазин самовивозу<select id="p_store"></select></label>
+        <label>Примітка<textarea id="p_comment" rows="3" placeholder="Зручний час, побажання"></textarea></label>
+      </div>
+
+      <div id="deliveryFields" class="order-fields" hidden>
+        <label>Ім’я та прізвище<input id="d_name" placeholder="Ім’я Прізвище"></label>
+        <label>Телефон<input id="d_phone" placeholder="+380..." inputmode="tel"></label>
+        <label>Місто<input id="d_city" placeholder="Ваше місто"></label>
+        <label>№ відділення / поштомату Нової пошти<input id="d_branch" placeholder="Напр. Відділення №5 або Поштомат 1234"></label>
+        <label>Примітка<textarea id="d_comment" rows="3" placeholder="Додаткова інформація"></textarea></label>
+      </div>
+
       <button class="btn primary full" type="submit">Підготувати замовлення</button>
     </form>
     <div id="orderResult" class="order-result" hidden></div>
