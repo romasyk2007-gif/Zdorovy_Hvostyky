@@ -47,7 +47,7 @@ function esc(v='') {
 async function loadProducts() {
   const { data, error } = await supabaseClient
     .from('products')
-    .select('id,name,price,old_price,description,image_url,is_active,category,stock_quantity')
+    .select('id,name,price,old_price,description,image_url,is_active,category,stock_quantity,stock,product_code')
     .eq('is_active', true)
     .order('created_at', { ascending:false });
 
@@ -58,7 +58,7 @@ async function loadProducts() {
     PRODUCTS = (data || []).map(row => {
       const price = Number(row.price);
       const oldPrice = row.old_price != null && Number(row.old_price) > price ? Number(row.old_price) : null;
-      const stock = row.stock_quantity != null ? Number(row.stock_quantity) : null;
+      const stock = row.stock_quantity != null ? Number(row.stock_quantity) : (row.stock != null ? Number(row.stock) : null);
       return {
         id: Number(row.id),
         name: row.name,
@@ -66,6 +66,7 @@ async function loadProducts() {
         price,
         oldPrice,
         stock,
+        productCode: row.product_code || '',
         img: row.image_url || 'assets/pets-hero.png',
         desc: row.description || ''
       };

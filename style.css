@@ -198,3 +198,5 @@ footer{background:#073c78;color:#d9ecff;padding:54px 0 20px}
 .mode-toggle .toggle-btn{flex:1;border:1px solid var(--line);background:#fff;color:var(--blue-dark);font-weight:800;border-radius:12px;padding:12px;cursor:pointer}
 .mode-toggle .toggle-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
 .order-fields{display:block}
+
+.product-code{font-size:11px;color:var(--muted);font-weight:800;margin-bottom:6px}.product-code b{color:var(--blue-dark)}
