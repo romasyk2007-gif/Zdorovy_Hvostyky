@@ -47,7 +47,7 @@ function esc(v='') {
 async function loadProducts() {
   const { data, error } = await supabaseClient
     .from('products')
-    .select('id,name,price,old_price,description,image_url,is_active,category,stock,stock_quantity,product_code')
+    .select('id,name,price,old_price,description,image_url,is_active,category,stock,product_code')
     .eq('is_active', true)
     .order('created_at', { ascending:false });
 
