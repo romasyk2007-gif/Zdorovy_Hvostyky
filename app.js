@@ -47,7 +47,7 @@ function esc(v='') {
 async function loadProducts() {
   const { data, error } = await supabaseClient
     .from('products')
-    .select('id,name,price,old_price,description,image_url,is_active,category,stock_quantity,stock,product_code')
+    .select('id,name,price,old_price,description,image_url,is_active,category,stock,stock_quantity,product_code')
     .eq('is_active', true)
     .order('created_at', { ascending:false });
 
@@ -58,7 +58,7 @@ async function loadProducts() {
     PRODUCTS = (data || []).map(row => {
       const price = Number(row.price);
       const oldPrice = row.old_price != null && Number(row.old_price) > price ? Number(row.old_price) : null;
-      const stock = row.stock_quantity != null ? Number(row.stock_quantity) : (row.stock != null ? Number(row.stock) : null);
+      const stock = row.stock != null ? Number(row.stock) : (row.stock_quantity != null ? Number(row.stock_quantity) : null);
       return {
         id: Number(row.id),
         name: row.name,
@@ -66,9 +66,9 @@ async function loadProducts() {
         price,
         oldPrice,
         stock,
-        productCode: row.product_code || '',
         img: row.image_url || 'assets/pets-hero.png',
-        desc: row.description || ''
+        desc: row.description || '',
+        productCode: row.product_code || ''
       };
     });
   }
@@ -117,9 +117,11 @@ function render() {
       <div class="product-img">
         <img src="${esc(p.img)}" alt="${esc(p.name)}">
         <span>${esc(p.category)}</span>
+        ${p.productCode ? `<span class="product-code-badge">Код: ${esc(p.productCode)}</span>` : ''}
         ${onSale ? `<span class="sale-badge">-${pct}%</span>` : ''}
       </div>
       <div class="product-body">
+        <div class="product-code-line">${p.productCode ? `Код: <b>${esc(p.productCode)}</b>` : ''}</div>
         <h3>${esc(p.name)}</h3>
         <p>${esc(p.desc)}</p>
         ${stockLabel}
